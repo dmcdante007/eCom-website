@@ -1,15 +1,22 @@
 import React from 'react'
-import SomeThing from './components/SomeThing'
+import SomeThing from './components/SomeThing';
+import Header from './components/Header';
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.css';
+import ModalIs from './components/Modal/Modal';
+import ContextProvider from './components/Context/ContextProvider';
+
+
 function App() {
  
 
   return (
-    <>
-      <h1>Lets learn</h1>
+    <ContextProvider>
+      <Header/>
+      <ModalIs/>
       <SomeThing/>
-    </>
+
+    </ContextProvider>
   )
 }
 
