@@ -1,5 +1,6 @@
-import React from "react";
-import { Button, Col, Row } from "react-bootstrap";
+import React, { useContext, useEffect } from "react";
+import { Button, Col, Container, Row } from "react-bootstrap";
+import ContextState from "./Context/ContextState";
 const productsArr = [
   {
     title: "Colors",
@@ -34,16 +35,22 @@ const productsArr = [
   },
 ];
 const SomeThing = () => {
+  const ctx = useContext(ContextState);
+  
 
-    const displayArr = productsArr.map((item)=>(
-        <Col>{item.title} {item.price} <img src={item.imageUrl}></img></Col>
-    ))
+  const displayArr = productsArr.map((item) => (
+    <Col key={Math.random()}>
+      {item.title}
+      <img src={item.imageUrl}></img>{" "}
+      <span>
+        {item.price} <Button onClick={()=>ctx.valuesInit.cartClicked(item)} type="primary">ADD TO CART</Button>
+      </span>
+    </Col>
+  ));
   return (
-    <>
-    <Row>
-      {displayArr} 
-      </Row>
-    </>
+    <Container style={{maxWidth: '800px', justifyContent:'center'}}>
+      <Row>{displayArr}</Row>
+    </Container>
   );
 };
 

@@ -46,18 +46,30 @@ const ContextProvider = (props) => {
   //for showing items in the cart model ->
 
   const cartList = cartElements.map((ele)=>(
-    <ListGroup.Item>{ele.title} {ele.price} <span style={{textAlign: 'right'}}>{ele.quantity}</span></ListGroup.Item>
+    <ListGroup.Item key={Math.random()}>{ele.title} {ele.price} <span style={{textAlign: 'right'}}>{ele.quantity}</span></ListGroup.Item>
   ))
 
 
+//for Add to cart button ->
+  const [updateCart, setupdateCart] = useState([])
 
+  const addedToCart = (item) => {
+    setupdateCart([...updateCart, item])
+    console.log(updateCart)
+  }
+//Showing selected cart items in cart ->
+const cartList2 = updateCart.map((ele)=>(
+    <ListGroup.Item key={Math.random()}>{ele.title} {ele.price} <span style={{textAlign: 'right'}}>{ele.quantity}</span></ListGroup.Item>
+  ))
+  
 
   const valuesInit = {
     modalis: modalView,
     stateIswhat: stateIs,
     closeit: handleClose,
     openit: handleShow,
-    cartitem : cartList,
+    cartitem : cartList2,
+    cartClicked : addedToCart,
   };
 
   return (
