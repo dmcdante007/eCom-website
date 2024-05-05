@@ -62,6 +62,9 @@ const cartList2 = updateCart.map((ele)=>(
     <ListGroup.Item key={Math.random()}>{ele.title} {ele.price} <span style={{textAlign: 'right'}}>{ele.quantity}</span></ListGroup.Item>
   ))
   
+//to increase the value of cart according to list size:
+const cartsize = updateCart.length
+// console.log(cartsize)
 
   const valuesInit = {
     modalis: modalView,
@@ -70,6 +73,8 @@ const cartList2 = updateCart.map((ele)=>(
     openit: handleShow,
     cartitem : cartList2,
     cartClicked : addedToCart,
+    cartsize: cartsize,
+    
   };
 
   return (
