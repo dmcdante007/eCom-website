@@ -64,6 +64,7 @@ const cartList2 = updateCart.map((ele)=>(
   
 //to increase the value of cart according to list size:
 const cartsize = updateCart.length
+
 // console.log(cartsize)
 
   const valuesInit = {
@@ -74,7 +75,7 @@ const cartsize = updateCart.length
     cartitem : cartList2,
     cartClicked : addedToCart,
     cartsize: cartsize,
-    
+
   };
 
   return (

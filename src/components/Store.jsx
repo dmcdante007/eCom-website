@@ -7,7 +7,6 @@ import ContextProvider from "./Context/ContextProvider";
 const Store = () => {
   return (
     <ContextProvider>
-      <Header />
       <SomeThing />
       <ModalIs />
     </ContextProvider>
