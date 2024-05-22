@@ -1,13 +1,15 @@
-import React from "react";
-import { Outlet } from "react-router-dom";
+import React, { useContext } from "react";
+import ContextState from "./Context/ContextProvider";
 import Header from "./Header";
 
-const HeaderRoutes = ()=>{
-
-    return <>
-        <Header/>
-        <Outlet/>
+const HeaderRoutes = (props) => {
+  const ctx = useContext(ContextState)
+  return (
+    <>
+      <Header></Header>
+      {ctx.stateIs}
     </>
-}
+  );
+};
 
 export default HeaderRoutes;

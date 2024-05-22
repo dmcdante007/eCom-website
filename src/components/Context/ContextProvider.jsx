@@ -1,6 +1,13 @@
 import React, { useState } from "react";
-import ContextState from "./ContextState";
 import { ListGroup } from "react-bootstrap";
+
+
+
+const ContextState = React.createContext({
+    stateIs: false
+})
+
+
 
 const cartElements = [
   {
@@ -34,7 +41,7 @@ const cartElements = [
   },
 ];
 
-const ContextProvider = (props) => {
+export const ContextProvider = (props) => {
   const [modalView, setmodalView] = useState(false);
   const stateIs = () => {
     setmodalView(true);
@@ -85,4 +92,4 @@ const cartsize = updateCart.length
   );
 };
 
-export default ContextProvider;
+export default ContextState;

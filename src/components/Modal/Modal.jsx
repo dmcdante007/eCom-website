@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Modal, Button, Col, Row, ListGroup } from "react-bootstrap";
-import ContextState from "../Context/ContextState";
+import ContextState from "../Context/ContextProvider";
 
 const ModalIs =()=>{
     const ctx = useContext(ContextState)

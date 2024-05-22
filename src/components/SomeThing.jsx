@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
-import ContextState from "./Context/ContextState";
+import ContextState from "./Context/ContextProvider";
+
 const productsArr = [
   {
     title: "Colors",

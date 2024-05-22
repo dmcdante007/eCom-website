@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import Header from "../components/Header";
 import { Container } from "react-bootstrap";
-import ContextState from "../components/Context/ContextState";
+import ContextState from "../components/Context/ContextProvider";
 
 const AboutPage = () => {
 
