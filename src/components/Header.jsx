@@ -15,6 +15,7 @@ const Header = () => {
           <Link style={{marginRight: '10px'}} to="/store">STORE</Link>
           <Link to="/About">ABOUT</Link>
           <Link style={{marginLeft: '10px'}} to="/Contactus">Contact-us</Link>
+          <Link style={{marginLeft: '10px'}} to="/LoginPage">Login</Link>
           {/* <Button href="#cart" onClick={ctx.valuesInit.stateIswhat}>
             Cart  <span>{ctx.valuesInit.cartsize}</span>
           </Button> */}
